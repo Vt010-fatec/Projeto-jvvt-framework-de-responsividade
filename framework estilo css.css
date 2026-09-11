@@ -1,0 +1,63 @@
+/* Estilo geral da página */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* Imagens da galeria */
+
+figure img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Efeito quando passa o mouse */
+
+figure img:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* Espaçamento da tabela */
+
+.table-container {
+    overflow-x: auto;
+}
+
+/* Formulário */
+
+form {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Modal */
+
+.modal-card {
+    width: 500px;
+    max-width: 90%;
+}
+
+/* Responsividade para celulares */
+
+@media (max-width: 768px) {
+
+    .hero-body {
+        padding: 3rem 1.5rem;
+    }
+
+    figure img {
+        height: 200px;
+    }
+
+    .navbar-menu {
+        background-color: #ffffff;
+    }
+}

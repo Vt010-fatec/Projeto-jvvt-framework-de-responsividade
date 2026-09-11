@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Viagens</title>
+
+    <!-- Framework Bulma -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE MENU -->
+    <nav class="navbar is-info" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <strong>✈️ Viaje+</strong>
+                </a>
+
+                <a role="button" class="navbar-burger"
+                   aria-label="menu"
+                   aria-expanded="false"
+                   data-target="menuPrincipal">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="menuPrincipal" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#inicio">Início</a>
+                    <a class="navbar-item" href="#destinos">Destinos</a>
+                    <a class="navbar-item" href="#contato">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="hero is-info is-medium">
+        <div class="hero-body has-text-centered">
+            <p class="title">Galeria de Viagens 🌎</p>
+            <p class="subtitle">
+                Conheça alguns destinos incríveis!
+            </p>
+
+            <button class="button is-warning" id="abrirModal">
+                Saiba mais
+            </button>
+        </div>
+    </section>
+
+    <!-- CARROSSEL / GALERIA -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title has-text-centered">
+                📸 Galeria de imagens
+            </h2>
+
+            <div class="columns">
+
+                <div class="column">
+                    <figure class="image">
+                        <img
+                            src="https://i.pinimg.com/originals/e7/c1/4f/e7c14fa236767712fec4d9a5a908a1ac.jpg"
+                            alt="RJ">
+                    </figure>
+                </div>
+
+                <div class="column">
+                    <figure class="image">
+                        <img
+                            src="https://images3.alphacoders.com/109/1095798.jpg"
+                            alt="Buenos Aires">
+                    </figure>
+                </div>
+
+                <div class="column">
+                    <figure class="image">
+                        <img
+                            src="https://wallpaperaccess.com/full/1192224.jpg"
+                            alt="Paris">
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TABELA -->
+    <section id="destinos" class="section has-background-light">
+        <div class="container">
+
+            <h2 class="title has-text-centered">
+                🗺️ Destinos
+            </h2>
+
+            <div class="table-container">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>País</th>
+                            <th>Preço aproximado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Rio de Janeiro</td>
+                            <td>Brasil</td>
+                            <td>R$ 1.500</td>
+                        </tr>
+
+                        <tr>
+                            <td>Buenos Aires</td>
+                            <td>Argentina</td>
+                            <td>R$ 2.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Paris</td>
+                            <td>França</td>
+                            <td>R$ 6.000</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section id="contato" class="section">
+        <div class="container">
+
+            <h2 class="title has-text-centered">
+                📩 Entre em contato
+            </h2>
+
+            <div class="columns is-centered">
+                <div class="column is-half">
+
+                    <form id="formulario">
+
+                        <div class="field">
+                            <label class="label">Nome</label>
+
+                            <div class="control">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    id="nome"
+                                    placeholder="Digite seu nome"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">E-mail</label>
+
+                            <div class="control">
+                                <input
+                                    class="input"
+                                    type="email"
+                                    id="email"
+                                    placeholder="Digite seu e-mail"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Destino desejado</label>
+
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select id="destino">
+                                        <option>Rio de Janeiro</option>
+                                        <option>Buenos Aires</option>
+                                        <option>Paris</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Mensagem</label>
+
+                            <div class="control">
+                                <textarea
+                                    class="textarea"
+                                    id="mensagem"
+                                    placeholder="Digite sua mensagem"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <button class="button is-info is-fullwidth"
+                                    type="submit">
+                                Enviar
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+
+        <div class="modal-background"></div>
+
+        <div class="modal-card">
+
+            <header class="modal-card-head">
+                <p class="modal-card-title">
+                    Sobre o projeto
+                </p>
+
+                <button class="delete"
+                        aria-label="fechar"
+                        id="fecharModal">
+                </button>
+            </header>
+
+            <section class="modal-card-body">
+                <p>
+                    Este site foi desenvolvido utilizando HTML, CSS,
+                    JavaScript e o framework Bulma.
+                </p>
+
+                <br>
+
+                <p>
+                    O objetivo é demonstrar elementos de uma página
+                    responsiva, como menu, tabela, formulário, galeria
+                    e modal.
+                </p>
+            </section>
+
+            <footer class="modal-card-foot">
+                <button class="button is-info" id="fecharModal2">
+                    Fechar
+                </button>
+            </footer>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Viaje+</strong> — Projeto escolar de desenvolvimento web.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
